@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Robocon IITD 2020</title>
+<meta charset="UTF-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+ --><style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 45px;
+  text-align: center;
+  /*background: #1abc9c;*/
+  color: #094173;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+  margin:0;
+}
+
+.header div{
+  float:left;
+}
+
+  .header p{
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: Montserrat;
+    line-height: 30px;
+    font-weight:600;
+  }
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #666;
+  text-align: center;
+  
+  text-decoration: none;
+  width: 25%;
+  font-family: century-gothic;
+  font-size: 22px;
+  letter-spacing: 0
+}
+
+.navbar div{
+padding: 14px 20px;
+
+}
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar div.active {
+  /*background-color: #666;*/
+  color: #666;
+  border-bottom: 2px solid dodgerblue;
+}
+.navbar img{
+  float: left;
+  padding: 5px 70px 4px 40px;
+  width: 18%;
+  /*display: none;*/
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+
+.container{
+  padding:30px;
+}
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+#roboconlogo{
+  display:none;
+  padding:0;
+}
+
+.footer img{
+
+  width: 16%;
+    height: 126px;
+    padding: 20px;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+   <!--  <img width="186px" height="163px" src="index files\Doordarshan Logo.png" /> -->
+    <img width="300px" height="145px" src="index files\Robocon Logo.png" />
+  <!--   <img width="143px" height="140px" src="index files\IITD Logo.png" /> -->
+  </div>
+  <h1>National DD-Robocon 2020</h1>
+  <p>IIT Delhi, India<br>June 14, 2020 (Sunday)</p>
+</div>
+
+<div class="navbar">
+  <div id="roboconlogo">
+  <img  width="150px" height="55px" src="index files\Robocon Logo.png" />
+</div>
+<div class="headerTab">
+  <a id="nav1" href="javascript:void(0)" class=" " onclick="openTab(event, 'Home');"><div class="tablinks active">Home</div></a>
+  <a id="nav2" href="javascript:void(0)"  onclick="openTab(event, 'RuleBook');"><div class="tablinks">Rule Book</div></a>
+  <a id="nav3" href="javascript:void(0)"  onclick="openTab(event, '2019Robocon');"><div class="tablinks">2019 Robocon</div></a>
+  <a id="nav4" href="javascript:void(0)"  onclick="openTab(event, 'ContactUs');" class="right"><div class="tablinks">Contact Us</div></a>
+</div>
+</div>
+<div class="container">
+  <div id="Home" class="tabInfo" style="display:block">
+    <div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+  </div>
+
+  <div id="RuleBook" class="tabInfo" style="display:none">
+    <h2>RuleBook</h2>
+    <p>Rules bla bla bla</p> 
+  </div>
+
+  <div id="2019Robocon" class="tabInfo" style="display:none">
+    <h2>2019 Robocon</h2>
+    <p>bla bla bla</p>
+  </div>
+  <div id="ContactUs" class="tabInfo" style="display:none">
+    <h2>Contact Us</h2>
+    <p>Go onnnnnnnnnnnnnnnnnn</p>
+  </div>
+
+
+
+
+</div>
+
+<div class="footer">
+  <h2>In Association With</h2>
+  <img  width="150px" height="55px" src="index files\Doordarshan Logo.png" />
+  <img  width="150px" height="55px" src="index files\IITD Logo.png" />
+  <img  width="150px" height="55px" src="index files\IRSI.png" />
+  <h2>Our Sponsors</h2>
+  <img  width="150px" height="55px" src="index files\MATHWORKS.jpg" />
+  <img  width="150px" height="55px" src="index files\P+F.png" />
+  <img  width="150px" height="55px" src="index files\ROHM.jpg" />
+  <img  width="150px" height="55px" src="index files\kUKA.jpg" />
+  <img  width="150px" height="55px" src="index files\BIS.jpg" />
+  <img  width="150px" height="55px" src="index files\springer.jpg" />
+</div>
+<script>
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 235 || document.documentElement.scrollTop > 235) {
+      document.getElementById("nav1").style.width = "20%";
+      document.getElementById("nav2").style.width = "20%";
+      document.getElementById("nav3").style.width = "20%";
+      document.getElementById("nav4").style.width = "20%";
+      document.getElementById("roboconlogo").style.display = "block";
+    } else {
+      document.getElementById("nav1").style.width = "25%";
+      document.getElementById("nav2").style.width = "25%";
+      document.getElementById("nav3").style.width = "25%";
+      document.getElementById("nav4").style.width = "25%";
+      document.getElementById("roboconlogo").style.display = "none";
+    }
+  }
+  function openTab(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("tabInfo");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace( "active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " active";
+}
+</script>
+</body>
+</html>
