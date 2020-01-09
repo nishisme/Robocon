@@ -3,240 +3,663 @@
 <head>
 <title>Robocon IITD 2020</title>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
- --><style>
+--><style>
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 /* Style the body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
 }
 
 /* Header/logo Title */
 .header {
-  padding: 45px;
-  text-align: center;
-  /*background: #1abc9c;*/
-  color: #094173;
+padding: 45px;
+text-align: center;
+/*background: #1abc9c;*/
+color: #094173;
+height:250px;
 }
 
 /* Increase the font size of the heading */
 .header h1 {
-  font-size: 40px;
-  margin:0;
+font-size: 40px;
+margin:0;
 }
 
 .header div{
-  float:left;
+float:left;
+
 }
 
-  .header p{
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-family: Montserrat;
-    line-height: 30px;
-    font-weight:600;
-  }
+.header p{
+font-size: 20px;
+letter-spacing: 3px;
+font-family: Montserrat;
+line-height: 30px;
+font-weight:600;
+}
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
 .navbar {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+overflow: hidden;
+background-color: #f1f1f1;
+position: sticky;
+position: -webkit-sticky;
+top: 0;
+z-index:10;
 }
 
 /* Style the navigation bar links */
 .navbar a {
-  float: left;
-  display: block;
-  color: #666;
-  text-align: center;
-  
-  text-decoration: none;
-  width: 25%;
-  font-family: century-gothic;
-  font-size: 22px;
-  letter-spacing: 0
+float: left;
+display: block;
+color: #666;
+text-align: center;
+
+text-decoration: none;
+width: 20%;
+font-family: century-gothic;
+font-size: 20px;
+letter-spacing: 0
 }
 
 .navbar div{
-padding: 14px 20px;
+padding: 17px 20px;
 
 }
 /* Right-aligned link */
 .navbar a.right {
-  float: right;
+float: right;
 }
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+background-color: #ddd;
+color: black;
 }
 
 /* Active/current link */
 .navbar div.active {
-  /*background-color: #666;*/
-  color: #666;
-  border-bottom: 2px solid dodgerblue;
+/*background-color: #666;*/
+color: #666;
+border-bottom: 2px solid dodgerblue;
 }
 .navbar img{
-  float: left;
-  padding: 5px 70px 4px 40px;
-  width: 18%;
-  /*display: none;*/
+float: left;
+padding: 5px 70px 4px 40px;
+width: 40%;
+height: 60px;
+/*display: none;*/
 }
 
 /* Column container */
 .row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
+display: -ms-flexbox; /* IE10 */
+display: flex;
+-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;
 }
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 
 .container{
-  padding:30px;
+/*padding:30px;*/
 }
 .side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
+padding: 40px;
+-ms-flex: 30%; /* IE10 */
+flex: 40%;
+/*background-color: #f1f1f1;*/
+/*padding: 20px;*/
 }
 
 /* Main column */
 .main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
+padding: 40px;
+-ms-flex: 70%; /* IE10 */
+flex: 60%;
+background-color: white;
+padding: 20px;
 }
 
 /* Fake image, just for this example */
 .fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+background-color: #aaa;
+width: 100%;
+padding: 20px;
 }
 
 /* Footer */
 .footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
+padding: 20px;
+text-align: center;
 }
 
 #roboconlogo{
-  display:none;
-  padding:0;
+display:none;
+padding:0;
 }
 
 .footer img{
 
-  width: 16%;
-    height: 126px;
+width: 16%;
+height: 126px;
+padding: 20px;
+}
+.idea{
+text-align:center;
+flex:100%;
+margin-bottom: 50px;
+}
+.idea h3{
+color: #444;
+font-size: 20px;
+line-height: 26px;
+letter-spacing: 1px;
+font-weight:500;
+}
+.idea h2{
+color: #333;
+font-size: 40px;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.blockquote{
+  padding-left: 30px;
+font-size: 1.2em;
+text-align: justify;
+border-left: 5px solid #eee;
+margin: 1% 17% 4% 17%;
+padding: 25px;
+/* font-size: 18px; */
+font-family: Montserrat;
+text-align: initial;
+}
+.main h4{
+font-size:40px;
+font-weight:900;
+}
+.main p{
+  font-size: 21px;
+letter-spacing: 1px;
+font-family: Montserrat;
+}
+.contest{
+    margin: 60px 0px 10px 0px;
+  text-align: center;
+  background-color: #efefef;
+  /* margin: 10px; */
+  padding: 10px;
+}
+.flip-card {
+   /* margin: 60px;*/
+  flex: 50%;
+background-color: transparent;
+width: 300px;
+height: 300px;
+perspective: 1000px;
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+
+.flip-card-front {
+background-color: #bbb;
+color: black;
+}
+.flip-card-front h5{
+      padding-top: 60px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-size: 24px;
+}
+.flip-card-front img{
+  float:left;
+}
+.flip-card-back {
+background-color: #2980b9;
+color: white;
+transform: rotateY(180deg);
+}
+.parallax {
+/* The image used */
+width:100%;
+background-image: url("parallax.jpg");
+
+/* Set a specific height */
+min-height: 500px; 
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.container{
+  width: 100%;
+}
+.FAQ{
+      padding: 70px;
+    width: 100%;
+}
+.card{
+  background-color: rgb(250, 250, 250);
+    /* background-color: white; */
+    padding: 20px;
+}
+.card-header h5{
+      font-size: 25px;
+}
+.card-body{
+  font-size: 20px;
+}
+.collapse{
+  background-color: white;
     padding: 20px;
 }
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
+.row {   
+flex-direction: column;
+}
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
+.navbar a {
+float: none;
+width: 100%;
+}
 }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div>
-   <!--  <img width="186px" height="163px" src="index files\Doordarshan Logo.png" /> -->
-    <img width="300px" height="145px" src="index files\Robocon Logo.png" />
-  <!--   <img width="143px" height="140px" src="index files\IITD Logo.png" /> -->
-  </div>
-  <h1>National DD-Robocon 2020</h1>
-  <p>IIT Delhi, India<br>June 14, 2020 (Sunday)</p>
+<div>
+<!--  <img width="186px" height="163px" src="index files\Doordarshan Logo.png" /> -->
+<img width="468px" height="189px" src="index files\Logos1.png" />
+<!--   <img width="143px" height="140px" src="index files\IITD Logo.png" /> -->
+</div>
+<h1>National DD-Robocon 2020</h1>
+<p>IIT Delhi, India<br>June 14, 2020 (Sunday)</p>
 </div>
 
 <div class="navbar">
-  <div id="roboconlogo">
-  <img  width="150px" height="55px" src="index files\Robocon Logo.png" />
+<div id="roboconlogo">
+<img  width="40%" height="60px" src="index files\Logos1.png" />
 </div>
-<div class="headerTab">
-  <a id="nav1" href="javascript:void(0)" class=" " onclick="openTab(event, 'Home');"><div class="tablinks active">Home</div></a>
-  <a id="nav2" href="javascript:void(0)"  onclick="openTab(event, 'RuleBook');"><div class="tablinks">Rule Book</div></a>
-  <a id="nav3" href="javascript:void(0)"  onclick="openTab(event, '2019Robocon');"><div class="tablinks">2019 Robocon</div></a>
-  <a id="nav4" href="javascript:void(0)"  onclick="openTab(event, 'ContactUs');" class="right"><div class="tablinks">Contact Us</div></a>
+<div id="headerTab" style="padding:0px;">
+<a id="nav1" href="javascript:void(0)" class=" " onclick="openTab(event, 'Home');"><div class="tablinks active">Home</div></a>
+<a id="nav2" href="javascript:void(0)"  onclick="openTab(event, 'RuleBook');"><div class="tablinks">Rule Book</div></a>
+<a id="nav3" href="javascript:void(0)"  onclick="openTab(event, '2019Robocon');"><div class="tablinks">Robocon'19</div></a>
+<a id="nav4" href="javascript:void(0)"  onclick="openTab(event, 'FAQ');"><div class="tablinks">FAQ</div></a>
+<a id="nav5" href="javascript:void(0)"  onclick="openTab(event, 'ContactUs');" class="right"><div class="tablinks">Contact Us</div></a>
 </div>
+</div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  <li data-target="#myCarousel" data-slide-to="1"></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner">
+  <div class="item active">
+    <img src="https://www.aburobocon2020.com.fj/wp-content/uploads/2019/08/ABU-Robocon2020-fiji-suva-b1-v2.jpg" alt="Los Angeles" style="width:100%;">
+  </div>
+
+  <div class="item">
+    <img src="https://www.aburobocon2020.com.fj/wp-content/uploads/2019/08/ABU-Robocon2020-fiji-suva-b2.jpg" alt="Chicago" style="width:100%;">
+  </div>
+</div>
+
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  <span class="sr-only">Next</span>
+</a>
 </div>
 <div class="container">
-  <div id="Home" class="tabInfo" style="display:block">
-    <div class="row">
-  <div class="side">
-    <h2>About Me</h2>
-    <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
+<div id="Home" class="tabInfo" style="display:block">
+<div class="row">
+  <div class="idea">
+    <h3>THEME & RULES</h3>
+    <h2>"GREAT URTUU"</h2>
+    <blockquote style="padding-left:30px;font-size: 1.4em;text-align: initial;margin: 40px;">
+                <span class="fa fa-cogs"></span>
+                The ABU Asia-Pacific Robot Contest (ABU Robocon) is an annual robot competition organized by Asia-
+                Pacific Broadcasting Union (ABU) since 2002. ABU Robocon 2019 is scheduled to be organized on 25
+                August in the city of Ulanbaatar in Mongolia. The winning team of DD-Robocon 2019 will represent
+                India in Mongolia.
+
+
+              </blockquote>
   </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class=" side">
+      <img src="index files\roboCon.png" width="100%" />
+      
+    </div>
+    <div class=" main">
+  
+      <h4>THE GAME</h4>
+      <p>Each country is represented by one team. The task this year is to make two robots (one could be wheel based and another has to be 4 - legged walking robot) within specified dimensions and weight limits to be perform a set of task in 3 minutes over a field of 13 m by 10 m.</p>
+    </div>
+
+
+
+    <div class="contest"  style="margin: 60px 0px 10px 0px;">
+      <h1>BRIEF CONTEST SCHEDULE</h1> 
+      <p>
+
+        June 14, 2019: Arrival and Registration (Transportation will be arranged from New Delhi and Hazrat Nizamuddin stations only)
+        <br>
+
+        June 15, 2019: Practice (About 10 mins in each color field. Exact schedule will be available upon arrival)
+        <br>
+        June 16, 2019: Preliminaries, QFs, SFs, and Final
+        <br>
+        June 17, 2019: Departure (Drops to above two stations will be made)
+        <br>
+        For those who are coming early or leaving later, they may like to contact NAMMS (Mrs. Kapoor: 9810 065 266) for accommodation, and MANN (Mr. Ashwini: 9891 398 914 or 011 2356 111 or 9990 222 999) for their transportation at their own risk.
+  </div>
+<div class="flip-card" style="margin: 0px 0px 10px 0px;">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="index files/accomodation.jpg" alt="Avatar" style="width:300px;height:300px;">
+      <h5>TRANSPORTATION OF REGISTERED TEAM MEMBERS AND THEIR ROBOTS ON JUNE 14 AND 17, 2019</h5>
+    </div>
+    <div class="flip-card-back">
+      
+
+
+        <p>Volvo busses are arranged for the registered team members (as per the list sent by the college authorities during the registration and payment) to be picked up from New Delhi/Hazrat Nizamuddin station as per each team's travel plan on June 14, 2019. Since Delhi has NO ENTRY for any kind of luggage carriers like Tempo/Truck, etc. during 9:30am to 6:30pm, we will bring your robots to IIT Delhi using the storage spaces of the Volvo bus (45-seater). See photos below.</p>
+
+        <p>Your packed boxes should not exceed 36' 36' 36 inches. The Volvo 45-seater bus can accommodate 4 boxes of the above mentioned dimensions along with 8 numbers of luggage (international luggage size standard that is 27' 21' 14 inches). If you cannot conform to the above dimensions for your robots, you have to wait till 6:30 pm in the railway station until "No Entry" ban is lifted.</p>
+
+        <p>For any difficulty and planning, please contact Mr. Yashwant Prasad, 090660 32872. The same arrangement will be made during the dropping to the station on June 17, 2019. Kindly inform your train departure time when you arrive on June 14, 2019 at the registration desk. Please note that each team has been a Team Associate who will be your one-point contact to get any information/help, e.g., your accommodation arrangement, etc. Some of them may have already contacted you. Their list will be soon be made available to you as well. Kindly cooperate with them.</p>
+    </div>
   </div>
 </div>
+<div class="flip-card" style="margin: 0px 0px 60px 0px;">
+  <div class="flip-card-inner">
+  <div class="flip-card-front">
+    <img src="index files/busTwo.jpg" alt="Avatar" style="width:300px;height:300px;">
+    <h5>ACCOMMODATION DURING JUNE 14-17, 2019 (3 NIGHTS ONLY)</h5>
   </div>
+  <div class="flip-card-back">
+    
 
-  <div id="RuleBook" class="tabInfo" style="display:none">
-    <h2>RuleBook</h2>
-    <p>Rules bla bla bla</p> 
+    <p>Accommodation to the paid registered team members (including faculty) is arranged at IIT Delhi hostels. Hostel allotment will be informed upon arrival at the Registration Desk on June 14, 2019 in Lecture Hall Complex (LHC). A mattress, a bedsheet and a pillow will be provided. Meals are also arranged in the hostels. NO food will be available in the game area. Teams are requested to bring enough door locks with them.</p>
   </div>
-
-  <div id="2019Robocon" class="tabInfo" style="display:none">
-    <h2>2019 Robocon</h2>
-    <p>bla bla bla</p>
   </div>
-  <div id="ContactUs" class="tabInfo" style="display:none">
-    <h2>Contact Us</h2>
-    <p>Go onnnnnnnnnnnnnnnnnn</p>
-  </div>
-
-
-
-
 </div>
+
+<div class="parallax">
+  <div style="font-size:20px">
+  <h2>NATIONAL DD-ROBOCON AT IIT DELHI DETAILS</h2>
+  <p>
+  1 Each qualified team MUST fill up the Participation Form (click here) upon a payment of Rs. 30,000 (which includes accommodation and food of team leader plus three members in IIT Delhi hostel) plus Rs. 3,000 per person for any additional members.
+  <br>
+  2 Each participating team requires to upload a certificate from the Director/Principal/HOD with their signature in original with seal ( Click here for the format).
+  <br>
+  3 Participation Form should be filled and submitted by May 19, 2019 (Sunday) for successful participation on June 16, 2019.
+  <br>
+  4 For the members of each participating team, accommodation and food are arranged in the IIT Delhi hostel during June 14-17, 2019 (3 nights).
+  <br>
+  5 Each qualifying team MUST also fill up their travel plan by filling up another form (click here) for their pick-up and drop from two nearby stations only (New Delhi and Hazrat Nizamuddin).
+  </p>
+
+  <h2>PAYMENT MODE</h2>
+  <p>
+  All payments MUST be paid using the payment gateway (click here)</p>
+  </div>
+</div>
+
+
+<div class="FAQ">
+  <h2>Frequently Asked Questions</h2>
+  <!--Accordion wrapper-->
+  <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingOne1">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1"
+        aria-expanded="false" aria-controls="collapseOne1">
+        <h5 class="mb-0">
+          Is Technical Report required in Stage 2? <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+      <div class="card-body">
+        No Technical Report is required in Stage 2 but read "Stage 2 Details" carefully.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingTwo2">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+        aria-expanded="false" aria-controls="collapseTwo2">
+        <h5 class="mb-0">
+         What if there are some changes in the number of team members after registering?<i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+      <div class="card-body">
+        You cannot add any new member after you registered and paid by the last date. In case, somebody cannot make to DD-Robocon 2019 we are really sorry.
+      </div>
+    </div>
+
+  </div>
+  <!-- Accordion card -->
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingThree3">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+        aria-expanded="false" aria-controls="collapseThree3">
+        <h5 class="mb-0">
+          In a scenario like a team member is not opting for accommodation will he/she gets a certificate? <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+      <div class="card-body">
+        Those students whose names were provided by the institute/college authority and uploaded are eligible for the certificate provided they participate during the competition days and show their college I-card. Every participant MUST carry their college I-card along with the registration badge which will be checked during registration on June 14, 2019.
+      </div>
+    </div>
+
+  </div>
+  <!-- Accordion card -->
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingFour4">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFour4"
+        aria-expanded="false" aria-controls="collapseFour4">
+        <h5 class="mb-0">
+          When the practice field will be available?<i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4" data-parent="#accordionEx">
+      <div class="card-body">
+        See Brief Contest Schedule above
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingFive5">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFive5"
+        aria-expanded="false" aria-controls="collapseFive5">
+        <h5 class="mb-0">
+          Is there faculty accommodation along with the team members? <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseFive5" class="collapse" role="tabpanel" aria-labelledby="headingFive5" data-parent="#accordionEx">
+      <div class="card-body">
+        Yes, it was arranged in the hostels provided they registered along with the team members and paid. Sorry, no separate accommodation is available for the faculty members. If they have not already registered with their team members and paid we will not be able to provide any accommodation.
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingSix6">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseSix6"
+        aria-expanded="false" aria-controls="collapseSix6">
+        <h5 class="mb-0">
+          Will other students be allowed to watch DD-Robocon 2019 from participating universities? <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseSix6" class="collapse" role="tabpanel" aria-labelledby="headingSix6" data-parent="#accordionEx">
+      <div class="card-body">
+        Not in the contest arena. It was mainly due to large registrations by the teams. Sorry for the strictness. However, we are trying to work out video feed of the games in a separate lecture hall or web. If it materializes then one can enjoy the games without being in the game arena physically.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="heading7">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse7"
+        aria-expanded="false" aria-controls="collapse7">
+        <h5 class="mb-0">
+          When the registration will be done at I.I.T Delhi?<i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapse7" class="collapse" role="tabpanel" aria-labelledby="heading7" data-parent="#accordionEx">
+      <div class="card-body">
+        Upon arrival on June 14, 2019. The exact venue will be informed soon.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="heading8">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse8"
+        aria-expanded="false" aria-controls="collapse8">
+        <h5 class="mb-0">
+          Transportation facilities to teams not coming to 2 stations we have mentioned on websites. Some could not find train tickets. So they are planning to come by bus. <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapse8" class="collapse" role="tabpanel" aria-labelledby="heading8" data-parent="#accordionEx">
+      <div class="card-body">
+        Sorry, you have to arrange to come directly to the Registration venue of IIT Campus on June 14, 2019. Exact details will be informed later.
+      </div>
+    </div>
+
+  </div>
+  <!-- Accordion card -->
+
+
+  </div>
+  <!-- Accordion wrapper -->
+</div>
+</div>
+
+
+<div id="RuleBook" class="tabInfo" style="display:none">
+  <h2>RuleBook</h2>
+  <p>Rules bla bla bla</p> 
+</div>
+
+<div id="2019Robocon" class="tabInfo" style="display:none">
+  <h2>2019 Robocon</h2>
+  <p>bla bla bla</p>
+</div>
+<div id="FAQ" class="tabInfo" style="display:none">
+  <h2>FAQ</h2>
+  <p>bla bla bl</p>
+</div>
+<div id="ContactUs" class="tabInfo" style="display:none">
+  <h2>Contact Us</h2>
+  <p>Go onnnnnnnnnnnnnnnnnn</p>
+</div>
+
 
 <div class="footer">
   <h2>In Association With</h2>
-  <img  width="150px" height="55px" src="index files\Doordarshan Logo.png" />
-  <img  width="150px" height="55px" src="index files\IITD Logo.png" />
   <img  width="150px" height="55px" src="index files\IRSI.png" />
   <h2>Our Sponsors</h2>
   <img  width="150px" height="55px" src="index files\MATHWORKS.jpg" />
@@ -247,34 +670,42 @@ padding: 14px 20px;
   <img  width="150px" height="55px" src="index files\springer.jpg" />
 </div>
 <script>
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction() {
-    if (document.body.scrollTop > 235 || document.documentElement.scrollTop > 235) {
-      document.getElementById("nav1").style.width = "20%";
-      document.getElementById("nav2").style.width = "20%";
-      document.getElementById("nav3").style.width = "20%";
-      document.getElementById("nav4").style.width = "20%";
-      document.getElementById("roboconlogo").style.display = "block";
-    } else {
-      document.getElementById("nav1").style.width = "25%";
-      document.getElementById("nav2").style.width = "25%";
-      document.getElementById("nav3").style.width = "25%";
-      document.getElementById("nav4").style.width = "25%";
-      document.getElementById("roboconlogo").style.display = "none";
-    }
-  }
-  function openTab(evt, tabName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("tabInfo");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace( "active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " active";
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+if (document.body.scrollTop > 235 || document.documentElement.scrollTop > 235) {
+  document.getElementById("nav1").style.width = "20%";
+  document.getElementById("nav2").style.width = "20%";
+  document.getElementById("nav3").style.width = "20%";
+  document.getElementById("nav4").style.width = "20%";
+  document.getElementById("nav5").style.width = "20%";
+  document.getElementById("roboconlogo").style.display = "block";
+  document.getElementById("roboconlogo").style.width = "50%";
+  document.getElementById("headerTab").style.width = "50%";
+  document.getElementById("headerTab").style.float = "right";
+} else {
+  document.getElementById("nav1").style.width = "20%";
+  document.getElementById("nav2").style.width = "20%";
+  document.getElementById("nav3").style.width = "20%";
+  document.getElementById("nav4").style.width = "20%";
+  document.getElementById("nav5").style.width = "20%";
+  document.getElementById("roboconlogo").style.display = "none";
+  document.getElementById("roboconlogo").style.width = "50%";
+  document.getElementById("headerTab").style.width = "100%";
+  document.getElementById("headerTab").style.float = "right";
+}
+}
+function openTab(evt, tabName) {
+var i, x, tablinks;
+x = document.getElementsByClassName("tabInfo");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace( "active", "");
+}
+document.getElementById(tabName).style.display = "block";
+evt.currentTarget.firstElementChild.className += " active";
 }
 </script>
 </body>
